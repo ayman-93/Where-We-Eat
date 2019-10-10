@@ -1,0 +1,37 @@
+body, html {
+    height: 100%;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+
+
+.container {
+
+  /* Add the blur effect */
+  /* filter: blur(8px); */
+
+  /* Full height */
+  /* height: 100%; */
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    width: 100%;
+    background-image: url("../Assesst//img/photographer.jpg");
+  }
+  .section {
+    text-align: center;
+    width: 55%;
+    height: 100vh;
+    margin: auto;
+    background: lightgray;
+    
+}
+
+.btn {
+  margin: 5px
+}

@@ -1,18 +1,14 @@
-import React, { useEffect } from 'react';
 
 
-function GetResturant(){
+function GetResturant(latLng) {
+	const { lat, lng } = latLng;
+	console.log("lat:", lat);
+	console.log("lng:", lng);
 
-	useEffect(() => {
-		console.log('mounted')
-		
-		fetch("https://wainnakel.com/api/v1/GenerateFS.php?uid=26.2716025,50.2017993&get_param=value",{mode: 'cors'})
-    .then((data) => data.json())
-    .then((resp) => console.log(resp))
-    .catch((err) => console.log(err))
-	}, []);
-
-	return(<h1> new Resturn is here </h1>)
+	return fetch(`/api/v1/GenerateFS.php?uid=${lat},${lng}&get_param=value`)
+		.then((data) => data.json())
+		.then((resp) => resp)
+		.catch((err) => console.log("err: ", err))
 }
 
 export default GetResturant;
